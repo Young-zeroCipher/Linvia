@@ -1,0 +1,4 @@
+.DS_Thumbs
+node_modules/
+*.log
+.env

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINVIA - Play. Download. Enjoy.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Onboarding Screen -->
+    <div class="screen" id="onboarding-screen">
+      <div class="hero">
+        <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=800&q=80" alt="LINVIA" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111652.png" alt="LINVIA">
+            <span>LINVIA<span style="color:var(--primary-green)">®</span></span>
+          </div>
+          <h1 class="hero-title">Enjoy Listening To Music</h1>
+          <p class="hero-description">LINVIA is a proprietary audio streaming and media services provider. Discover, play, and download your favorite tracks anytime.</p>
+          <button class="btn btn-primary" onclick="goTo('choose-mode-screen')">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Choose Mode Screen -->
+    <div class="screen hidden" id="choose-mode-screen">
+      <div class="top-nav">
+        <button class="nav-item" onclick="goBack()"><i class="fas fa-chevron-left"></i></button>
+        <div class="nav-logo">LINVIA<span style="color:var(--primary-green)">®</span></div>
+        <button class="nav-item"><i class="fas fa-ellipsis-v"></i></button>
+      </div>
+      <div class="screen-content">
+        <h2 class="text-center mb-6">Choose Mode</h2>
+        <div class="mode-container">
+          <div class="mode-option" onclick="selectMode('dark')">
+            <i class="fas fa-moon"></i>
+            <span>Dark Mode</span>
+          </div>
+          <div class="mode-option active" onclick="selectMode('light')">
+            <i class="fas fa-sun"></i>
+            <span>Light Mode</span>
+          </div>
+        </div>
+        <button class="btn btn-primary mt-6" onclick="goTo('home-screen')">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

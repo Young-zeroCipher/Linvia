@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - LINVIA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="screen">
+      <div class="top-nav">
+        <button class="nav-item" onclick="history.back()"><i class="fas fa-chevron-left"></i></button>
+        <div class="flex-1 mx-2">
+          <input type="text" class="form-input" placeholder="Search for artists, songs, playlists...">
+        </div>
+        <button class="nav-item"><i class="fas fa-ellipsis-v"></i></button>
+      </div>
+      <div class="screen-content">
+        <h3 class="mb-4">Top Searches</h3>
+        <div class="grid-2">
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=300&q=80" alt="Billie Eilish">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">Billie Eilish</div>
+              <div class="card-subtitle">Artist</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1516420411030-12c807358369?w=300&q=80" alt="Drake">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">Drake</div>
+              <div class="card-subtitle">Artist</div>
+            </div>
+          </div>
+        </div>
+        <h3 class="mb-4 mt-6">Recent Searches</h3>
+        <div class="playlist-item">
+          <div class="playlist-item-thumb">
+            <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=80&q=80" alt="Bad Guy">
+          </div>
+          <div class="playlist-item-info">
+            <div class="playlist-item-title">Bad Guy</div>
+            <div class="playlist-item-artist">Billie Eilish</div>
+          </div>
+          <div class="playlist-item-actions">
+            <button class="playlist-item-heart"><i class="far fa-heart"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="now-playing-bar" onclick="location.href='now-playing.html'">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=100&q=80" alt="Now Playing">
+      </div>
+      <div class="np-info">
+        <div class="np-title">Bad Guy</div>
+        <div class="np-artist">Billie Eilish</div>
+      </div>
+      <div class="np-progress">
+        <div class="np-progress-fill" style="width:56%"></div>
+      </div>
+      <div class="np-controls">
+        <button class="btn-icon"><i class="fas fa-step-backward"></i></button>
+        <button class="btn-icon play-pause"><i class="fas fa-pause"></i></button>
+        <button class="btn-icon"><i class="fas fa-step-forward"></i></button>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <a href="home.html" class="nav-bottom-item"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="search.html" class="nav-bottom-item active"><i class="fas fa-search"></i><span>Search</span></a>
+      <a href="library.html" class="nav-bottom-item"><i class="fas fa-heart"></i><span>Library</span></a>
+      <a href="profile.html" class="nav-bottom-item"><i class="fas fa-user"></i><span>Profile</span></a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - LINVIA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="screen">
+      <div class="top-nav">
+        <button class="nav-item" onclick="history.back()"><i class="fas fa-chevron-left"></i></button>
+        <div class="nav-logo">Profile</div>
+        <button class="nav-item"><i class="fas fa-ellipsis-v"></i></button>
+      </div>
+      <div class="screen-content">
+        <div class="flex-center mb-6">
+          <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; margin-bottom:16px; border:3px solid var(--primary-green);">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="Profile" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h2>LINVIA User</h2>
+        </div>
+        <button class="btn btn-outline mb-6" style="width:auto; padding:10px 24px;">Edit Profile</button>
+
+        <div class="section-header mb-4">
+          <h3 class="section-title">Your Library</h3>
+        </div>
+        <div class="grid-2">
+          <div class="card card-vertical card-square">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&q=80" alt="Coastal Waves">
+            </div>
+            <div class="card-content">
+              <div class="card-title">Coastal Waves</div>
+              <div class="card-subtitle">Aurora</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-square">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1449824213278-5339e8e60918?w=200&q=80" alt="Urban Nights">
+            </div>
+            <div class="card-content">
+              <div class="card-title">Urban Nights</div>
+              <div class="card-subtitle">LINVIA Selects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="now-playing-bar" onclick="location.href='now-playing.html'">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=100&q=80" alt="Now Playing">
+      </div>
+      <div class="np-info">
+        <div class="np-title">Bad Guy</div>
+        <div class="np-artist">Billie Eilish</div>
+      </div>
+      <div class="np-progress">
+        <div class="np-progress-fill" style="width:56%"></div>
+      </div>
+      <div class="np-controls">
+        <button class="btn-icon"><i class="fas fa-step-backward"></i></button>
+        <button class="btn-icon play-pause"><i class="fas fa-pause"></i></button>
+        <button class="btn-icon"><i class="fas fa-step-forward"></i></button>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <a href="home.html" class="nav-bottom-item"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="search.html" class="nav-bottom-item"><i class="fas fa-search"></i><span>Search</span></a>
+      <a href="library.html" class="nav-bottom-item"><i class="fas fa-heart"></i><span>Library</span></a>
+      <a href="profile.html" class="nav-bottom-item active"><i class="fas fa-user"></i><span>Profile</span></a>
+    </div>
+  </div>
+</body>
+</html>

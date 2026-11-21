@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Mode - LINVIA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="screen">
+      <div class="top-nav">
+        <button class="nav-item" onclick="history.back()"><i class="fas fa-chevron-left"></i></button>
+        <div class="nav-logo">LINVIA<span style="color:var(--primary-green)">®</span></div>
+        <button class="nav-item"><i class="fas fa-ellipsis-v"></i></button>
+      </div>
+      <div class="screen-content">
+        <h2 class="mb-6">Choose Mode</h2>
+        <div class="mode-container">
+          <div class="mode-option" onclick="toggleMode('dark', this)">
+            <i class="fas fa-moon"></i>
+            <span>Dark Mode</span>
+          </div>
+          <div class="mode-option active" onclick="toggleMode('light', this)">
+            <i class="fas fa-sun"></i>
+            <span>Light Mode</span>
+          </div>
+        </div>
+        <button class="btn btn-primary mt-6" onclick="location.href='home.html'">Continue</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    function toggleMode(mode, el) {
+      document.querySelectorAll('.mode-option').forEach(o => o.classList.remove('active'));
+      el.classList.add('active');
+      if (mode === 'light') {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+    }
+  </script>
+</body>
+</html>

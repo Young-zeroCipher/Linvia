@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - LINVIA</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="screen">
+      <div class="top-nav">
+        <button class="nav-item"><i class="fas fa-search"></i></button>
+        <div class="nav-logo">LINVIA<span style="color:var(--primary-green)">®</span></div>
+        <button class="nav-item"><i class="fas fa-ellipsis-v"></i></button>
+      </div>
+      <div class="screen-content">
+        <div class="home-header flex-between mb-4">
+          <div class="flex-center">
+            <div class="home-user-avatar">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80" alt="User">
+            </div>
+          </div>
+          <button class="nav-item"><i class="fas fa-bell"></i></button>
+        </div>
+
+        <div class="promo-card">
+          <h3>Happier Than Ever</h3>
+          <p>New Album &bull; Billie Eilish</p>
+        </div>
+
+        <div class="tabs">
+          <a href="#" class="tab active">News</a>
+          <a href="#" class="tab">Video</a>
+          <a href="#" class="tab">Artists</a>
+          <a href="#" class="tab">Podcasts</a>
+        </div>
+
+        <div class="section-header mb-4">
+          <h3 class="section-title">Made for You</h3>
+          <a href="#" class="section-link">See More</a>
+        </div>
+        <div class="grid-4">
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=300&q=80" alt="Bad Guy">
+              <div class="card-play-overlay"></div>
+              <div class="card-badge">New</div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">Bad Guy</div>
+              <div class="card-subtitle">Billie Eilish</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1516420411030-12c807358369?w=300&q=80" alt="Scorpion">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">Scorpion</div>
+              <div class="card-subtitle">Drake</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1493225055121-4ab65901b5e7?w=300&q=80" alt="WH">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">WH</div>
+              <div class="card-subtitle">Billie</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-tall">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1623955069749-031dc8d3cd63?w=300&q=80" alt="Lover">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">Lover</div>
+              <div class="card-subtitle">Taylor Swift</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-header mb-4">
+          <h3 class="section-title">Playlist</h3>
+          <a href="#" class="section-link">See More</a>
+        </div>
+        <div class="grid-2">
+          <div class="card card-vertical card-square">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1617474834028-86e881f086c0?w=300&q=80" alt="As It Was">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">As It Was</div>
+              <div class="card-subtitle">Harry Styles</div>
+            </div>
+          </div>
+          <div class="card card-vertical card-square">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1532241338919-f5a4363cae34?w=300&q=80" alt="God Did">
+              <div class="card-play-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-title">God Did</div>
+              <div class="card-subtitle">DJ Khaled</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="now-playing-bar" onclick="location.href='now-playing.html'">
+      <div class="np-thumb">
+        <img src="https://images.unsplash.com/photo-1614614638761-e5d01e89504e?w=100&q=80" alt="Now Playing">
+      </div>
+      <div class="np-info">
+        <div class="np-title">Bad Guy</div>
+        <div class="np-artist">Billie Eilish</div>
+      </div>
+      <div class="np-progress">
+        <div class="np-progress-fill" style="width:35%"></div>
+      </div>
+      <div class="np-controls">
+        <button class="btn-icon"><i class="fas fa-step-backward"></i></button>
+        <button class="btn-icon play-pause"><i class="fas fa-pause"></i></button>
+        <button class="btn-icon"><i class="fas fa-step-forward"></i></button>
+      </div>
+    </div>
+
+    <div class="bottom-nav">
+      <a href="#" class="nav-bottom-item active"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="search.html" class="nav-bottom-item"><i class="fas fa-search"></i><span>Search</span></a>
+      <a href="library.html" class="nav-bottom-item"><i class="fas fa-heart"></i><span>Library</span></a>
+      <a href="profile.html" class="nav-bottom-item"><i class="fas fa-user"></i><span>Profile</span></a>
+    </div>
+  </div>
+</body>
+</html>
