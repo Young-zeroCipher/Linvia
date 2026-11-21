@@ -72,6 +72,25 @@ fun HomeScreen(navController: NavHostController, viewModel: HomeViewModel = hilt
                     })
                 }
             }
+
+            Spacer(modifier = Modifier.height(32.dp))
+
+            Text("Quick Access", style = MaterialTheme.typography.titleLarge)
+            Spacer(modifier = Modifier.height(16.dp))
+
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                item { QuickAccessCard("Podcasts", Icons.Default.Cast, "Listen to your favorite shows") { navController.navigate("podcasts") } }
+                item { QuickAccessCard("Audiobooks", Icons.Default.Book, "Premium audiobooks") { navController.navigate("audiobooks") } }
+                item { QuickAccessCard("Music Videos", Icons.Default.Videocam, "Watch official videos") { navController.navigate("music_videos") } }
+                item { QuickAccessCard("Social Listening", Icons.Default.People, "Listen with friends") { navController.navigate("social_listening") } }
+                item { QuickAccessCard("AI Recommendations", Icons.Default.Sparkles, "AI-curated playlists") { navController.navigate("ai_recommendations") } }
+                item { QuickAccessCard("Music Recognition", Icons.Default.Mic, "Identify songs instantly") { navController.navigate("music_recognition") } }
+                item { QuickAccessCard("Music Charts", Icons.Default.BarChart, "Global & regional") { navController.navigate("music_charts") } }
+                item { QuickAccessCard("Concerts", Icons.Default.Event, "Buy tickets & events") { navController.navigate("concerts") } }
+            }
         }
     }
 }
@@ -97,5 +116,45 @@ private fun TrackRow(track: Track, onClick: () -> Unit) {
         }
         Spacer(modifier = Modifier.weight(1f))
         Icon(Icons.Default.PlayCircleFilled, contentDescription = "Play", tint = LinviaGreen)
+    }
+}
+
+@Composable
+private fun QuickAccessCard(
+    title: String,
+    icon: androidx.compose.ui.graphics.ImageVector,
+    subtitle: String,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .clickable { onClick() }
+            .padding(8.dp)
+            .size(160.dp),
+        elevation = 2.dp
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = LinviaGreen,
+                modifier = Modifier.size(32.dp)
+            )
+            Text(
+                text = title,
+                style = MaterialTheme.typography.titleMedium,
+                textAlign = androidx.compose.ui.text.TextAlign.Center
+            )
+            Text(
+                text = subtitle,
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = androidx.compose.ui.text.TextAlign.Center
+            )
+        }
     }
 }

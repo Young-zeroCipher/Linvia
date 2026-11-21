@@ -2,6 +2,14 @@ package com.linvia.app.di
 
 import com.linvia.app.repository.MusicRepository
 import com.linvia.app.repository.MusicRepositoryImpl
+import com.linvia.app.repository.media.AudiobookRepository
+import com.linvia.app.repository.media.AudiobookRepositoryImpl
+import com.linvia.app.repository.media.MusicVideoRepository
+import com.linvia.app.repository.media.MusicVideoRepositoryImpl
+import com.linvia.app.repository.media.PodcastRepository
+import com.linvia.app.repository.media.PodcastRepositoryImpl
+import com.linvia.app.repository.social.SocialRepository
+import com.linvia.app.repository.social.SocialRepositoryImpl
 import com.linvia.app.service.ApiService
 import dagger.Module
 import dagger.Provides
@@ -38,5 +46,29 @@ object NetworkModule {
     @Singleton
     fun provideMusicRepository(apiService: ApiService): MusicRepository {
         return MusicRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun providePodcastRepository(apiService: ApiService): PodcastRepository {
+        return PodcastRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideAudiobookRepository(apiService: ApiService): AudiobookRepository {
+        return AudiobookRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideMusicVideoRepository(apiService: ApiService): MusicVideoRepository {
+        return MusicVideoRepositoryImpl(apiService)
+    }
+
+    @Provides
+    @Singleton
+    fun provideSocialRepository(apiService: ApiService): SocialRepository {
+        return SocialRepositoryImpl(apiService)
     }
 }
