@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Linvia" parent="android:Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/linvia_green</item>
+        <item name="colorPrimaryVariant">@color/linvia_green_hover</item>
+        <item name="colorSecondary">@color/linvia_green_hover</item>
+        <item name="android:windowBackground">@color/linvia_dark_bg</item>
+        <item name="android:statusBarColor">@color/linvia_dark_bg</item>
+        <item name="android:navigationBarColor">@color/linvia_dark_bg</item>
+    </style>
+</resources>

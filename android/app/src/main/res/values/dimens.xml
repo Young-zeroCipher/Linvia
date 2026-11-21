@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="large_card_corner_radius">16dp</dimen>
+    <dimen name="bottom_nav_height">70dp</dimen>
+    <dimen name="now_playing_bar_height">60dp</dimen>
+    <dimen name="top_nav_height">60dp</dimen>
+    <dimen name="screen_padding">16dp</dimen>
+</resources>

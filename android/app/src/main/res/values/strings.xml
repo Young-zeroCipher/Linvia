@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LINVIA</string>
+    <string name="choose_mode">Choose Mode</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="library">Library</string>
+    <string name="profile">Profile</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="social_listening">Social Listening</string>
+    <string name="ai_recommendations">AI Recommendations</string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="create_account">Create Account</string>
+    <string name="get_started">Get Started</string>
+    <string name="continue_button">Continue</string>
+</resources>
