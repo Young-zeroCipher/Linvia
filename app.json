@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "LINVIA",
+    "slug": "linvia",
+    "version": "0.1.0",
+    "platforms": [
+      "android"
+    ],
+    "orientation": "portrait",
+    "scheme": "linvia",
+    "userInterfaceStyle": "dark",
+    "android": {
+      "package": "com.youngndabagroup.linvia",
+      "edgeToEdgeEnabled": true
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

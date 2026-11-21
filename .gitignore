@@ -1,4 +1,11 @@
-.DS_Thumbs
 node_modules/
-*.log
+.expo/
+dist/
+web-build/
+coverage/
+*.tsbuildinfo
 .env
+.env.*
+!.env.example
+android/
+ios/

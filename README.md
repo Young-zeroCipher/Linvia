@@ -1,133 +1,54 @@
-# LINVIA - Advanced Music Streaming Platform
+# LINVIA
 
-A comprehensive music streaming ecosystem named **LINVIA** with a web UI clone and a full-featured Android app that goes beyond Spotify with AI recommendations, social listening, podcasts, audiobooks, music videos, concert tickets, music recognition, and collaborative playlists.
+An independent Android-first Expo app by **YOUNG NDABA GROUP**. LINVIA is built around legally authorized music and its own catalog; it does not depend on third-party private APIs, protected streams, or DRM circumvention.
 
----
+## Current stage
 
-## 📱 LINVIA Android App (in `/android/`)
+LINVIA is an Android-first Expo music app foundation with file-based tab navigation, a dark theme, reusable track UI, local catalog search, and an in-memory saved-tracks library. It now includes Supabase email/password authentication and an owner-scoped profile flow. The six fictional tracks are development fixtures, not a licensed catalog. No audio is played or streamed yet.
 
-A feature-rich Android music streaming app built with Kotlin and Jetpack Compose, designed to go beyond Spotify with advanced AI-powered features.
+## Requirements
 
-### 🚀 Advanced Features Beyond Spotify
+- Node.js 20.19 or newer and npm
+- Android Studio with an Android SDK/emulator, or an Android device with Expo Go
+- JDK supported by the installed Android Gradle tooling for native builds
 
-| Feature | Description |
-|---------|-------------|
-| **🧠 AI Recommendations** | Mood/context-based playlists (Focus, Workout, Chill, Party, Sleep, Discovery, Mood Booster, Throwback) |
-| **👥 Social Listening Rooms** | Real-time group listening with room codes, active room browser, chat |
-| **🎯 Smart Offline Mode** | AI-predicted auto-downloads, smart cache management |
-| **🎧 Enhanced Audio** | Built-in equalizer, crossfade, gapless playback, sleep timer |
-| **📻 Podcasts** | Subscribe to podcasts, download episodes, track progress |
-| **📚 Audiobooks** | Purchase and listen to audiobooks with chapter support |
-| **🎬 Music Videos** | Watch official music videos, trending and featured |
-| **🎤 Music Recognition** | Shazam-like song identification |
-| **📊 Music Charts** | Global, US, UK, and regional top 50 charts |
-| **🎫 Concert Tickets** | Browse upcoming concerts and buy tickets |
-| **🤝 Collaborative Playlists** | Create playlists friends can contribute to |
-| **🎯 Smart Playlists** | Auto-generated based on mood, history, preferences |
+## Run
 
-### 📱 Android Screens (18 total)
-
-| Screen | Description |
-|--------|-------------|
-| Choose Mode | Dark/Light theme selector |
-| Sign In | Authentication with email/password |
-| Register | Account creation |
-| Home | Personalized feed with Quick Access grid |
-| Search | Track/artist/album search |
-| Library | Your music collection |
-| Profile | User profile & settings |
-| Now Playing | Full player with controls |
-| Lyrics | Synced lyrics display |
-| Social Listening | Real-time group listening rooms |
-| AI Recommendations | AI-curated playlists by mood |
-| Podcasts | Subscribe, download, listen |
-| Audiobooks | Purchase and listen |
-| Music Videos | Official videos, trending |
-| Music Recognition | Identify songs instantly |
-| Music Charts | Global & regional charts |
-| Collaborative Playlists | Shared playlists with friends |
-| Concerts | Browse and buy tickets |
-
-### 🛠️ Android Tech Stack
-
-- **100% Kotlin** with Jetpack Compose UI
-- **Material3** design system
-- **Hilt** dependency injection
-- **Room** database for offline storage
-- **ExoPlayer** for media playback
-- **Coroutines + Flow** for reactive programming
-- **Retrofit + OkHttp** for API
-- **Coil** for image loading
-- **Foreground service** for background playback
-
-### 🛠️ Android Setup & Build
-
-```bash
-# Navigate to Android project
-cd android
-
-# Make gradlew executable
-chmod +x gradlew
-
-# Build the project
-./gradlew build
-
-# Run on device/emulator
-./gradlew installDebug
+```powershell
+npm install
+npm run start
 ```
 
-### 📋 Android Requirements
+Press `a` in the Expo terminal to open an available Android emulator, or scan the development QR code with Expo Go. For a native Android build, run `npx expo run:android` after installing the Android SDK and configuring the local environment.
 
-- Android Studio Giraffe (2022.3.1) or later
-- JDK 11 or later
-- Android SDK 34 (compileSdk)
-- Minimum SDK 24 (Android 7.0)
+## Supabase account setup
 
----
+1. Create a Supabase project and copy `.env.example` to `.env`.
+2. Set `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` from the Supabase project's Connect panel.
+3. Run `supabase/migrations/202611210001_profiles.sql` in the Supabase SQL Editor.
+4. Restart Expo after changing `.env` so the app loads the new public configuration.
 
-## 🌐 LINVIA Web Version (root)
+The Account tab supports email/password sign-up, sign-in, profile display-name updates, and sign-out. If email confirmation is enabled in Supabase Auth, new users must confirm their address before signing in. Only the publishable key belongs in the mobile app; never put a service-role key in an `EXPO_PUBLIC_` variable.
 
-A reverse-engineered, pixel-perfect Spotify UI clone with:
+## Checks
 
-### Screens Included
-
-- **Onboarding** — "Get Started" welcome screen
-- **Choose Mode** — Dark/Light theme selector
-- **Home** — News tab, Made for You, Playlists
-- **Sign In** — Username/email + password with Google & Apple OAuth
-- **Register** — Full name, email, password with Google & Apple OAuth
-- **Now Playing** — Full player with progress bar
-- **Lyrics** — Synced lyrics with verse markers
-- **Library** — Recently added, Playlists, Artists, Albums (light theme)
-- **Search** — Artist and track search
-- **Profile** — User profile with library
-
-### Tech Stack (Web)
-
-- HTML5
-- CSS3 (CSS variables, Flexbox, Grid, responsive design)
-- Font Awesome 6 (icons)
-- Vanilla JavaScript (minimal, for theme switching)
-
----
-
-## 🛠️ Getting Started (Web)
-
-```bash
-# Clone the repository
-git clone https://github.com/Young-zeroCipher/Linvia.git
-
-# Open in browser
-cd Linvia
-open index.html
+```powershell
+npm run typecheck
+npm test
 ```
 
----
+## Project map
 
-## 📄 License
+- `src/app`: Expo Router layouts and screens
+- `src/features/auth`: Supabase client, encrypted session storage, and auth context
+- `src/features/catalog`: track type, development fixtures, and search logic
+- `src/features/library`: Zustand favorites state
+- `src/shared/theme`: design tokens
+- `src/shared/ui`: reusable artwork and track-row UI
+- `tests`: focused business-logic tests
+- `supabase/migrations`: profile schema and row-level access policies
+- `docs/ARCHITECTURE.md`: module boundaries, data flow, and planned backend/security design
 
-MIT License — feel free to use this as a learning resource or template for your own music streaming UI.
+## Ownership
 
----
-
-**LINVIA** — Play. Download. Enjoy. Smarter.
+Project owner: YOUNG NDABA DEV & YOUNG NDABA GROUP.
